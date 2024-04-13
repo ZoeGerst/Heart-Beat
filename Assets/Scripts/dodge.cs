@@ -11,6 +11,9 @@ public class dodge : MonoBehaviour
     
     public KeyCode keyPressedLeft;
     public KeyCode keyPressedRight;
+
+    public defenseNotes orph_attack;
+    public Transform LaunchOFFset;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +42,11 @@ public class dodge : MonoBehaviour
         if(Input.GetKeyUp(keyPressedRight)){
 
             thSR.sprite = uprightOrph;
+
+        }
+        if(Input.GetKeyDown("Fire1")){
+
+            Instantiate(orph_attack, LaunchOFFset.position, transform.rotation);
 
         }
         
