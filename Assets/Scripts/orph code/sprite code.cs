@@ -48,12 +48,12 @@ public class dodge : MonoBehaviour
             thSR.sprite = uprightOrph;
 
         }
-        /*if (Input.GetKeyDown(KeyCode.Space))
-        {
+        //if (Input.GetKeyDown(KeyCode.Space))
+       // {
 
-            Instantiate(orph_attack, LaunchOFFset.position, transform.rotation);
+          //  Instantiate(orph_attack, LaunchOFFset.position, transform.rotation);
 
-        }*/
+        //}
 
 
 

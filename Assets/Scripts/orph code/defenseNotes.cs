@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class defenseNotes : MonoBehaviour
 {
-    public float Speed = 4.5f;
+    public float Speed = 4.5f; 
 
     // Update is called once per frame
     public void Update()
@@ -11,11 +11,11 @@ public class defenseNotes : MonoBehaviour
         transform.position += new Vector3(-1, 0, 0) * Time.deltaTime * Speed;
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter (Collider other)
     {
         if (other.gameObject.tag == "boss")
-        {
+           {
             Destroy(gameObject);
-        }
+           }
     }
 }
