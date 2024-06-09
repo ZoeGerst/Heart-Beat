@@ -25,10 +25,10 @@ public class cerb_health : MonoBehaviour
             Debug.Log("ouch: " + gameObject.name);
             cerbHealthBar.CerbSetHealth(currCerbHealth);
 
-            if (currCerbHealth <= 0)
+            if (currCerbHealth <= 1)
             {
                 Debug.Log("trigger");
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
             }
         }
     }

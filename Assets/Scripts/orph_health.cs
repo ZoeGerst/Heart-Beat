@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class orph_health : MonoBehaviour
 {
 
@@ -17,8 +17,28 @@ public class orph_health : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void OnTriggerEnter(Collider other)
     {
-        //put in trigger
+        if (other.gameObject.tag == "damage1")
+        {
+            currHealth -= (10);
+            
+            healthBar.SetHealth(currHealth);
+            if (currHealth <= 0)
+            {
+            Debug.Log("trigger");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+        }
+        
     }
+    void update ()
+    {
+         if (currHealth <= 0)
+        {
+            Debug.Log("trigger");
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+
 }
